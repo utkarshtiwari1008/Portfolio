@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Utkarsh Tiwari | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#941e86;
+  color:#ebe5e9;
+  line-height:1.6;
+  transition:0.4s;
+}
+
+.light{
+  background:#fcf8fca1;
+  color:#020617;
+}
+
+html{scroll-behavior:smooth;}
+
+/* ===== HEADER ===== */
+header{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg,#d4eb25,#9333ea);
+}
+
+header h1{font-size:3rem;}
+header span{color:#47fd9f;}
+header p{margin-top:10px;font-size:1.2rem;}
+
+header a{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 30px;
+  background:#5f1b50;
+  color:#ffffffe0;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ===== PROFILE IMAGE (BIG SIZE) ===== */
+.profile-pic{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid #47fd9f;
+  margin-bottom:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* ===== TOGGLE BUTTON ===== */
+.toggle{
+  position:fixed;
+  top:20px;
+  right:20px;
+  padding:10px 15px;
+  border:none;
+  border-radius:20px;
+  background:#020617;
+  color:#fff;
+  cursor:pointer;
+  z-index:1000;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:80px 10%;
+}
+
+.title{
+  text-align:center;
+  font-size:2.2rem;
+  margin-bottom:50px;
+  color:#38bdf8;
+}
+
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+/* ===== ABOUT FLEX ===== */
+.about-flex{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.about-text{
+  max-width:500px;
+}
+
+/* ===== SKILLS & PROJECTS ===== */
+.skills,.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#060c24;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#facc15;
+}
+
+.light .card{
+  background:#e5e7eb;
+  color:#020617;
+}
+
+/* ===== RESUME BUTTON ===== */
+.resume-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 30px;
+  background:#d80b0b;
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#021710;
+  margin-top:50px;
+}
+
+.light footer{
+  background:#eaebe5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header h1{font-size:2.3rem;}
+  .profile-pic{
+    width:200px;
+    height:200px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleMode()">🌙 / ☀</button>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div>
+    <img src="./profile.png" alt="Utkarsh Tiwari" class="profile-pic">
+    <h1>Hi, I'm <span>Utkarsh Tiwari</span></h1>
+    <p>| Aspiring Front-end Developer |</p>
+    <a href="#projects">View My Work</a>
+  </div>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <h2 class="title">About Me</h2>
+
+  <div class="about about-flex">
+    <img src="./image.jpg" alt="Utkarsh Tiwari" class="profile-pic">
+
+    <div class="about-text">
+      <p>
+        I am a BCA 3rd year student passionate about web development and software engineering.
+        I enjoy creating modern, responsive websites and continuously improving my skills.
+      </p>
+      <a href="./resume.pdf" target="_blank" class="resume-btn" download>Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <h2 class="title">My Skills</h2>
+  <div class="skills">
+    <div class="card"><h3>HTML</h3></div>
+    <div class="card"><h3>CSS</h3></div>
+    <div class="card"><h3>JavaScript</h3></div>
+    <div class="card"><h3>Python</h3></div>
+    <div class="card"><h3>C / C++</h3></div>
+    <div class="card"><h3>Git & GitHub</h3></div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <h2 class="title">Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Modern responsive personal portfolio.</p>
+    </div>
+
+    <div class="card">
+      <h3>To-Do List App</h3>
+      <p>Task manager using HTML, CSS & JavaScript.</p>
+    </div>
+
+    <div class="card">
+      <h3>Calculator</h3>
+      <p>Simple calculator with clean UI.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <h2 class="title">Contact Me</h2>
+  <div class="about">
+    <p>Email: ut5937207@gmail.com</p>
+    <p>GitHub: github.com/utkarsh</p>
+    <p>LinkedIn: utkarsh-tiwari</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2026 Utkarsh Tiwari | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMode(){
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
